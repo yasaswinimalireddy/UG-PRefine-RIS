@@ -1,0 +1,6 @@
+Strategy,Mean Rate,Std Rate,Latency (ms)
+A. Never Refine (0%),18.421183,1.7011726,0.45
+B. Always Refine (100%),18.531775,1.6449931,4.12
+C. Random Refine (25%),18.45541,1.700739,1.36
+D. Uncertainty Gated (25%),18.461597,1.6417546,1.36
+E. Oracle Gap Gated (25%),18.475039,1.619348,1.36

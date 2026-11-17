@@ -1,0 +1,7 @@
+CSV Result File,Experiment Script,Model Config,Evaluator,Status
+FINAL_RESULTS_TABLE.csv,experiments/run_final_paper_experiments.py,configs/default_config.yaml,CanonicalEvaluator,VERIFIED
+FINAL_STATISTICS.csv,experiments/run_final_paper_experiments.py,configs/default_config.yaml,CanonicalEvaluator,VERIFIED
+FINAL_ABLATION.csv,experiments/run_final_paper_experiments.py,configs/default_config.yaml,CanonicalEvaluator,VERIFIED
+FINAL_ROBUSTNESS.csv,experiments/run_final_paper_experiments.py,configs/default_config.yaml,CanonicalEvaluator,VERIFIED
+FINAL_LATENCY.csv,experiments/run_final_paper_experiments.py,configs/default_config.yaml,CanonicalEvaluator,VERIFIED
+FINAL_COMPLEXITY.csv,experiments/run_final_paper_experiments.py,configs/default_config.yaml,CanonicalEvaluator,VERIFIED

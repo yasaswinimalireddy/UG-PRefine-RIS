@@ -1,0 +1,8 @@
+Baseline,Same Channels,Same CSI,Same Physical Model,Same Power,Fair
+No RIS,YES,YES,YES,YES,YES
+Random Phase,YES,YES,YES,YES,YES
+GumbelRIS,YES,YES,YES,YES,YES
+Standalone PGD,YES,YES,YES,YES,YES
+Coordinate Descent,YES,YES,YES,YES,YES
+Quantized AO,YES,YES,YES,YES,YES
+Continuous AO,YES,YES,YES,YES,YES (Continuous Upper Bound)

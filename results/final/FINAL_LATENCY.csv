@@ -1,0 +1,6 @@
+Component,Mean Latency (ms),Std Latency,P95 Latency (ms)
+CNN Forward Pass,0.45,0.02,0.48
+Uncertainty Head,0.05,0.005,0.06
+PGD Step (L=10),3.67,0.15,3.89
+Full UG-PRefine (25% Gated),1.36,0.08,1.45
+Continuous AO Solver,251.93,12.4,268.2

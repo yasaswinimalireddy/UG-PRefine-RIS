@@ -1,0 +1,7 @@
+system:
+  n_ris_elements: 128
+  n_bs_antennas: 16
+  n_users: 4
+  bits: 2
+  snr_db: 15.0
+  csi_noise_nmse: 0.05

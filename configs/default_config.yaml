@@ -1,0 +1,38 @@
+system:
+  n_ris_elements: 64
+  n_bs_antennas: 8
+  n_users: 2
+  bits: 2
+  snr_db: 15.0
+  carrier_freq_ghz: 3.5
+  csi_noise_nmse: 0.05
+  coupled_amplitude: true
+  beta_min: 0.2
+  phi_rad: 1.35088  # 0.43 * pi
+  gamma_exp: 1.6
+
+training:
+  seed: 42
+  batch_size: 32
+  epochs: 5
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  gumbel_temp_init: 2.0
+  gumbel_temp_min: 0.2
+  gumbel_temp_decay: 0.95
+  unrolled_pgd_steps: 2
+  pgd_step_size: 0.05
+  uncertainty_quantile: 0.75  # Top 25% uncertainty triggers repair
+  loss_weights:
+    lambda_rate: 1.0
+    lambda_uncertainty: 0.2
+    lambda_phase_circular: 0.1
+    lambda_quantization: 0.05
+
+dataset:
+  num_train_samples: 300
+  num_val_samples: 100
+  num_test_samples: 100
+  ray_tracing_scenario: "O1_3.5"
+
+device: "auto"

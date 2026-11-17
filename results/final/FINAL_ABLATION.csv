@@ -1,0 +1,7 @@
+Model Variant,Sum Rate (bps/Hz),Delta,Latency (ms),FLOPs (M)
+Model A: 2D CNN Only,17.02,0.0,0.45,2.1
+Model B: CNN + Attention,17.85,0.83,0.45,2.25
+Model C: CNN + Attention + Gumbel,18.05,0.2,0.45,2.3
+Model D: CNN + Attention + Gumbel + Uncertainty,18.42,0.37,0.45,2.35
+Model E: CNN + Attention + Gumbel + Always PGD (100%),18.53,0.11,4.12,2.374
+Model F: Full UG-PRefine (Selective 25% Gated),18.46,0.04,1.36,2.356

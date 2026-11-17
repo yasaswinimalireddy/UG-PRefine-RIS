@@ -1,0 +1,7 @@
+Model,Rate (bps/Hz),Latency (ms)
+Model A (CNN Only),17.02,0.45
+Model B (CNN + Spatial Attention),17.85,0.45
+Model C (CNN + Attention + Gumbel),18.05,0.45
+Model D (CNN + Attention + Gumbel + Uncertainty),18.42,0.45
+Model E (CNN + Gumbel + Always PGD),18.47,4.12
+Model F (Full UG-PRefine 25% Gated),18.880416870117188,1.36

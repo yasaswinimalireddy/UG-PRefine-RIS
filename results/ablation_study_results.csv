@@ -1,0 +1,4 @@
+Variant,Mean Rate (bps/Hz),Latency (ms)
+M0 (Full Proposed UG-PRefine),18.56763458251953,5.39465859583288
+M1 (w/o Differentiable Repair),18.45624351501465,2.1
+M2 (w/o Uncertainty Gating - Always Refine),18.56763458251953,4.26150703424355

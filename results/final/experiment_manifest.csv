@@ -1,0 +1,5 @@
+Experiment ID,Script,Status,Artifact
+EXP_01_BASELINES,run_baseline_eval.py,PASSED,corrected_baseline_comparison.csv
+EXP_02_UNCERTAINTY,audit_uncertainty_and_router.py,PASSED,uncertainty_calibration.csv
+EXP_03_SWEEP,run_phase2_experiments.py,PASSED,refinement_rate_sweep.csv
+EXP_04_COMPLEXITY,run_complexity_bench.py,PASSED,complexity_scaling_phase2.csv

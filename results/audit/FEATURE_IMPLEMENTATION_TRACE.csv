@@ -1,0 +1,24 @@
+feature,specified,implemented,file,class_or_function,called_during_training,called_during_inference,output_used,gradient_connected,tested,evidence,status
+MU-MISO RIS System Model,YES,YES,src/channel/system_model.py,SystemModel,YES,YES,YES,YES,YES,"Computes H_eff, ZF, and R_sum",GREEN
+Rician/Rayleigh Channel Generator,YES,YES,src/channel/ris_channel.py,RISChannelGenerator,YES,YES,YES,N/A,YES,"Generates H_BR, H_RU, H_BU",GREEN
+Spatial Correlation,YES,YES,src/channel/ris_channel.py,generate_spatial_correlation,YES,YES,YES,N/A,YES,Exponential correlation R_ij = corr^|i-j|,GREEN
+Imperfect CSI Noise,YES,YES,src/channel/csi_noise.py,CSINoiseModel,YES,YES,YES,N/A,YES,"Adds Gaussian error E ~ CN(0, delta^2 I)",GREEN
+Nonlinear Phase-Amplitude Coupling,YES,YES,src/channel/system_model.py,compute_amplitude,YES,YES,YES,YES,YES,beta(theta) evaluated in PyTorch graph,GREEN
+Zero-Forcing Beamforming,YES,YES,src/channel/system_model.py,compute_active_beamformers_zf,YES,YES,YES,YES,YES,Normalizes W to P_max,GREEN
+2D Spatial Representation of CSI,YES,YES,experiments/run_final_validation.py,Tensor stacking,YES,YES,YES,YES,YES,"Inputs tensor [B, 2, K*M, N]",GREEN
+ResNet Backbone,YES,YES,src/models/backbone_cnn.py,ComplexCNNBackbone,YES,YES,YES,YES,YES,2D Conv + ResBlock2D,GREEN
+Spatial Self-Attention,YES,YES,src/models/spatial_attention.py,SpatialSelfAttention,YES,YES,YES,YES,YES,Matrix multiplication energy map,GREEN
+Epistemic Uncertainty Head,YES,YES,src/models/uncertainty_head.py,EpistemicUncertaintyHead,YES,YES,YES,YES,YES,Softplus output var > 0,GREEN
+Gumbel-Softmax Quantization,YES,YES,src/models/gumbel_quantizer.py,GumbelSoftmaxQuantizer,YES,YES,YES,YES,YES,STE trick and phase alphabet mapping,GREEN
+Discrete b-bit Phase Constraints,YES,YES,src/channel/system_model.py,quantize_phase,YES,YES,YES,YES,YES,Nearest-neighbor mapping to F_b,GREEN
+Uncertainty-Gated Router,YES,YES,src/models/ug_prefine_model.py,forward (gating mask),NO,YES,YES,NO (Discrete Mask),YES,Masks samples with var >= threshold,GREEN
+Unrolled PGD Refinement,YES,YES,src/models/ug_prefine_model.py,unrolled_pgd_refine,NO,YES,YES,YES,YES,Unrolls L gradient ascent steps,GREEN
+Composite Achievable-Rate Objective,YES,YES,src/losses/composite_loss.py,CompositeRISLoss,YES,NO,YES,YES,YES,Rate + Uncertainty + Quant entropy loss,GREEN
+Heteroscedastic Uncertainty Loss,YES,YES,src/losses/uncertainty_loss.py,HeteroscedasticUncertaintyLoss,YES,NO,YES,YES,YES,Gaussian NLL loss formulation,GREEN
+Offline AO Solver,YES,YES,src/optimizers/alternating_optimization.py,AlternatingOptimization,NO,YES (Baseline),YES,N/A,YES,Vectorized multi-start AO solver,GREEN
+Quantized AO Baseline,YES,YES,src/optimizers/alternating_optimization.py,solve_batch (discrete=True),NO,YES (Baseline),YES,N/A,YES,2-bit discrete AO optimizer,GREEN
+Coordinate Descent Baseline,YES,YES,src/optimizers/coordinate_descent.py,CoordinateDescent,NO,YES (Baseline),YES,N/A,YES,Non-decreasing rate CD solver,GREEN
+Standalone PGD Baseline,YES,YES,src/optimizers/projected_gradient.py,ProjectedGradientDescent,NO,YES (Baseline),YES,N/A,YES,Unrolled PGD baseline solver,GREEN
+GumbelRIS Baseline,YES,YES,experiments/run_final_paper_experiments.py,Direct CNN prediction,NO,YES (Baseline),YES,N/A,YES,Deep CNN baseline without refinement,GREEN
+Frozen Test Set,YES,YES,src/evaluation/frozen_test_set.py,FrozenTestSet,NO,YES,YES,N/A,YES,500 frozen samples (seed 42000),GREEN
+OOD & Robustness Sweeps,YES,YES,experiments/run_final_paper_experiments.py,Robustness sweeps,NO,YES,YES,N/A,YES,"CSI noise, RIS size N, quantization bits",GREEN

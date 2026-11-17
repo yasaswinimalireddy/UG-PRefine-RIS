@@ -1,0 +1,5 @@
+Paper,Neural,Discrete Phase,Gumbel,Uncertainty,Selective Refine,PGD Layer,Imperfect CSI
+GumbelRIS (Zhang 2025),YES,YES,YES,NO,NO,NO,NO
+Al-Husseini et al. (2025),YES,NO,NO,NO,NO,NO,YES
+Li et al. (2026),YES,Codebook,NO,NO,NO,NO,PARTIAL
+UG-PRefine (Proposed),YES,YES,YES,YES,YES,YES,YES

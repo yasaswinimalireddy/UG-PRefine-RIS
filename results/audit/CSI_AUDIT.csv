@@ -1,0 +1,6 @@
+target_delta_sq,measured_nmse,noise_injection_location,evaluator_used_true_csi,status
+0.0,0.0,Dataset Generation & Model Input (H_noisy),YES (Evaluates on H_true),GREEN
+0.05,0.04976346562658674,Dataset Generation & Model Input (H_noisy),YES (Evaluates on H_true),GREEN
+0.1,0.09952693125317348,Dataset Generation & Model Input (H_noisy),YES (Evaluates on H_true),GREEN
+0.15,0.14929039687976026,Dataset Generation & Model Input (H_noisy),YES (Evaluates on H_true),GREEN
+0.2,0.19905386250634696,Dataset Generation & Model Input (H_noisy),YES (Evaluates on H_true),GREEN

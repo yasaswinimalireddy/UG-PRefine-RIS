@@ -1,0 +1,5 @@
+Mode,Mean Rate,Inference-Only,Offline AO Required
+A. Pure Direct Neural,18.42118263244629,YES,NO
+B. Neural + PGD Refinement,18.531774520874023,YES,NO
+C. Neural + AO Warm-Start,24.27,NO (Offline Warmstart),YES
+D. Full Offline AO,24.853483200073242,NO,YES

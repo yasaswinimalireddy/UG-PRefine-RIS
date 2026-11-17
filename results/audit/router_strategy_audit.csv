@@ -1,0 +1,5 @@
+Strategy,Refinement %,Mean Rate (bps/Hz),Latency (ms)
+A. Never Refine (Direct CNN),0%,18.42118263244629,0.45
+B. Always Refine (100% PGD),100%,18.4652156829834,4.12
+C. Random Refinement,25%,18.439607620239258,1.36
+D. Uncertainty-Gated (Proposed),25%,18.43260383605957,1.36

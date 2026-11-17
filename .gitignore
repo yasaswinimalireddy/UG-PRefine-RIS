@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest / Test / Coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments & IDEs
+.env
+.venv/
+env/
+venv/
+ENV/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS / temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
