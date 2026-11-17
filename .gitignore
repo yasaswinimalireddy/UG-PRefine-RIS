@@ -24,3 +24,8 @@ ENV/
 Thumbs.db
 desktop.ini
 $RECYCLE.BIN/
+
+# Private research / draft documents
+viva.md
+PAPER_OUTLINE.md
+
